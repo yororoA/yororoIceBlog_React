@@ -10,6 +10,7 @@ const PAGE_TITLES = {
 	'/account/login': `Login${TITLE_SUFFIX}`,
 	'/account/register': `Register${TITLE_SUFFIX}`,
 	'/account/town-law': `Town Law${TITLE_SUFFIX}`,
+	'/links': `Links${TITLE_SUFFIX}`,
 	'/test': `Test${TITLE_SUFFIX}`,
 	'/town': 'YororoIce Town',
 	'/town/': 'YororoIce Town',
@@ -39,6 +40,7 @@ const About = lazy(() => import('./pages/displayZone/about/about'));
 const Lol = lazy(() => import('./pages/displayZone/lol/lol'));
 const Chat = lazy(() => import('./pages/displayZone/chat/chat'));
 const Test = lazy(() => import('./pages/test/test'));
+const Links = lazy(() => import('./pages/links/links'));
 
 // 创建一个在Router内部的组件来处理导航逻辑
 function AppContent() {
@@ -78,6 +80,7 @@ function AppContent() {
 		<Suspense fallback={null}>
 			<Routes>
 				<Route path='/test' element={<Test />} />
+				<Route path='/links' element={<Links />} />
 				{/* access allowed only after account */}
 				<Route path='/town' element={<DisplayZone />}>
 					<Route index element={<Home />} />

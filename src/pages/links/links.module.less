@@ -1,0 +1,169 @@
+:root {
+  --links-bg: #0f131a;
+  --links-card: #1b212b;
+  --links-border: rgba(146, 160, 180, 0.4);
+  --links-accent: #3ed0c8;
+}
+
+.linksPage {
+  min-height: 100vh;
+  padding: 48px 6vw 80px;
+  background: var(--links-bg);
+  color: #e6edf4;
+  font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.pageTitle {
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.primaryButton,
+.ghostButton {
+  border: 1px solid var(--links-border);
+  background: transparent;
+  color: inherit;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+  letter-spacing: 1px;
+}
+
+.primaryButton {
+  background: var(--links-accent);
+  color: #0e1218;
+  border-color: transparent;
+}
+
+.editorCard {
+  background: var(--links-card);
+  border: 1px solid var(--links-border);
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.editorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  span {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  input,
+  select {
+    background: #0e1218;
+    border: 1px solid var(--links-border);
+    color: inherit;
+    padding: 10px 12px;
+    font-family: inherit;
+  }
+}
+
+.editorActions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.listSection {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--links-border);
+  padding: 24px;
+}
+
+.loading {
+  color: rgba(230, 237, 244, 0.6);
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.linkItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: #151a22;
+  border: 1px solid var(--links-border);
+  gap: 12px;
+}
+
+.linkInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.linkName {
+  color: var(--links-accent);
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.linkDescription {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.linkMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.linkCategory {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.linkActions {
+  display: flex;
+  gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .linksPage {
+    padding: 32px 6vw 60px;
+  }
+
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .linkItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .linkMeta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
